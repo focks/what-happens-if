@@ -87,3 +87,7 @@ stages are involved in linux Boot process:-
 -``Runlevel Scripts``:
 - running all scripts under /etc/rc.d is the last step of successful booting a Linux machine.
 - or say executes programs for current run level
+
+references
+----------
+https://www.youtube.com/watch?v=ZtVpz5VWjAs

@@ -19,3 +19,7 @@ Contents
 .. contents::
    :backlinks: none
    :local:
+
+the power button turned "on":boot process
+----------------------------------------
+

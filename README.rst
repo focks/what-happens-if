@@ -29,19 +29,26 @@ prompt;what happens behind it? Lets find it out..
 As soon as the power button is pressed the following 
 stages are involved in linux Boot process:-
 
-*The Boot Process*
--BIOS :stands for Basic Input/Output System
+*The Boot Process:*
+
+-BIOS
+stands for Basic Input/Output System
 Searches,loads and executes the boot loader program
     
 -Boot Loader
-  MBR :Master Boot Record, located in the first sector of bootable disk,loads and execute GRUB
-  GRUB :Grand Unified Boot Loader. selects particular kernel image. Loads and execute kernel and Init rd
 
--Kernel :mounts the root file system. Executes the init program located in /sbin/init
+MBR :Master Boot Record, located in the first sector of bootable disk,loads and execute GRUB
 
--Init :first program. Decides runlevel
+GRUB :Grand Unified Boot Loader. selects particular kernel image. Loads and execute kernel and Init rd
 
--Runlevel:Executes startup scripts
+-Kernel
+mounts the root file system. Executes the init program located in /sbin/init
+
+-Init
+first program. Decides runlevel
+
+-Runlevel
+Executes startup scripts
 
 
 

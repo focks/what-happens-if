@@ -31,16 +31,24 @@ stages are involved in linux Boot process:-
 
 *The Boot Process:*
 
-- BIOS: stands for Basic Input/Output System Searches,loads and executes the boot loader program    
-- Boot Loader MBR: Master Boot Record, located in the first sector of bootable disk,loads and execute GRUB
+*``BIOS``:*
+- Basic Input/Output System
+- First thing which loads once you power on your machine
+- CPU looks out into ROM for further instruction.
+- ROM contains JUMP function in the form of instruction which tells the CPU to bring up the BIOS
+- performs integrity check
+- BIOS searches the Boot loader program in Disk Drive,SD Card,CD/DVD ROM,Hard Disk
+- determine all the list of bootable devices available in the system
+- loads and execute the Boot loader (tries to boot from hard disk where the MBR contains primary boot loader)
 
-              GRUB :Grand Unified Boot Loader. selects particular kernel image. Loads and execute kernel and Init rd
-- Kernel: mounts the root file system. Executes the init program located in /sbin/init
-- Init: first program. Decides runlevel
-- Runlevel:Executes startup scripts
+*``Boot Loader``:*
+``MBR``:
+- Master Boot Record
+- first sector of the Hard Disk (less than 512 bytes) usually /dev/hda or /dev/sda
+- primary boot loader (434-446 bytes), partition table (64 bytes), MBR validation timestamp (6 bytes)
+- cannot load the kernel directly ,GRUB does
+- contains info about GRUB..(loads and executes GRUB)
 
-
-
-
-
-
+``GRUB``:
+- Grand Unified Boot Loader
+- 

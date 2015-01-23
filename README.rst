@@ -31,7 +31,7 @@ stages are involved in linux Boot process:-
 
 *The Boot Process:*
 
-``BIOS``:
+- ``BIOS``
 - Basic Input/Output System
 - First thing which loads once you power on your machine
 - CPU looks out into ROM for further instruction.
@@ -41,14 +41,14 @@ stages are involved in linux Boot process:-
 - determine all the list of bootable devices available in the system
 - loads and execute the Boot loader (tries to boot from hard disk where the MBR contains primary boot loader)
 
-``Boot Loader``:
-``MBR``:
+- ``Boot Loader``:
+- ``MBR``:
 - Master Boot Record
 - first sector of the Hard Disk (less than 512 bytes) usually /dev/hda or /dev/sda
 - primary boot loader (434-446 bytes), partition table (64 bytes), MBR validation timestamp (6 bytes)
 - cannot load the kernel directly ,GRUB does
 - contains info about GRUB..(loads and executes GRUB)
 
-``GRUB``:
+- ``GRUB``:
 - Grand Unified Boot Loader
 - 

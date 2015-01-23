@@ -31,7 +31,7 @@ stages are involved in linux Boot process:-
 
 *The Boot Process:*
 
-- ``BIOS``
+-``BIOS``
 
 - Basic Input/Output System
 - First thing which loads once you power on your machine
@@ -42,7 +42,7 @@ stages are involved in linux Boot process:-
 - determine all the list of bootable devices available in the system
 - loads and execute the Boot loader (tries to boot from hard disk where the MBR contains primary boot loader)
 
-- ``Boot Loader``:
+-``Boot Loader``:
 
 - ``MBR``:
 - Master Boot Record
@@ -68,7 +68,7 @@ stages are involved in linux Boot process:-
 - at this stage kernel is loaded from /boot/grub/grub.conf
 - Loads GUI interface i.e splash screen located at /grub/splash.xpm.gz
 
-- ``Kernel``:
+-``Kernel``:
 
 - one may consider it as the heart of the os responsible for handling all system processes;
 - it configures hardware and memory allocated to the system as soon as it is loaded

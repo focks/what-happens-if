@@ -23,3 +23,46 @@ Contents
 the power button turned "on":boot process
 ----------------------------------------
 
+As soon as the we press the power button we see a login 
+prompt;what happens behind it? Lets find it out..
+
+As soon as the power button is pressed the following 
+stages are involved in linux Boot process:-
+
+-BIOS
+
+    stands for Basic Input/Output System
+    Searches,loads and executes the boot loader program
+    
+-Boot Loader
+    * MBR *
+
+        Master Boot Record
+        Located in the first sector of bootable disk
+        loads and execute GRUB
+    * GRUB *
+
+        Grand Unified Boot Loader
+        selects particular kernel image
+        has knowledge of file system
+        loads and execute kernel and Init rd
+-Kernel
+
+    mounts the root file system
+    executes the init program located in /sbin/init
+
+-Init
+    
+    first program
+    has pid #1 run "ps -ef | grep init"
+    decides runlevel
+
+Runlevel:
+     
+     executes startup scripts
+
+
+
+
+
+

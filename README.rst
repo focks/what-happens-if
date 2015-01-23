@@ -74,11 +74,16 @@ stages are involved in linux Boot process:-
 - it configures hardware and memory allocated to the system as soon as it is loaded
 - uncompresses the initrd image
 - Unmounts initrd image and frees up all the memory occupied by the disk image.
-- then kernel mounts the root partition as specified in grup.conf
+- then kernel mounts the root partition as specified in grup.conf as ``read only``.
 - executes init program -the very first program (/sbin/init)
 
 -``Init``:
 
 - decides Runlevel which inturn dictates startup program
 
--``
+- executes the system to boot into the run level as specified in /etc/inittab
+- system's intefrity is checked and root partition is remounted as ``read write``.
+
+-``Runlevel Scripts``:
+- running all scripts under /etc/rc.d is the last step of successful booting a Linux machine.
+- or say executes programs for current run level
